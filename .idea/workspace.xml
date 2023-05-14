@@ -7,6 +7,7 @@
     <list default="true" id="80dec9a2-815c-44e4-a9a7-604e73574de3" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyHashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyHashTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyTestingClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyTestingClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684069575983</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit">
+      <created>1684078737010</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684078737010</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
