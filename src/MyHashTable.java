@@ -57,32 +57,6 @@ public class MyHashTable<K, V> {
         }
     }
 
-    private int getIndex(K key){
-        int hashCode = key.hashCode();
-        return Math.abs(hashCode % buckets.length);
-    }
-
-    private List<Entry<K,V>> getBucket(int index){
-        if (buckets[index] == null){
-            buckets[index] = new ArrayList<>();
-        }
-        return buckets[index];
-    }
-
-
-    private void resize(){
-        List<Entry<K,V>>[] oldBuckets = buckets;
-        buckets = new List[buckets.length * 2];
-        size = 0;
-        for (List<Entry<K,V>> bucket: oldBuckets){
-            if (bucket != null) {
-                for (Entry<K,V> entry: bucket) {
-                    put(entry.getKey(), entry.getValue());
-                }
-            }
-        }
-    }
-
     private static class Entry<K,V> {
         private K key;
         private V value;
