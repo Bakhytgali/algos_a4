@@ -4,6 +4,7 @@ public class Main {
         MyHashTable<MyTestingClass, String> table = new MyHashTable<>();
         for (int i = 0; i<10000; i++){
             MyTestingClass key  = new MyTestingClass(i);
-            table.put(key, "value" + i);}
+            table.put(key, "value" + i);
+        }
     }
 }
