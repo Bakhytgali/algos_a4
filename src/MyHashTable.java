@@ -29,6 +29,9 @@ public class MyHashTable<K, V> {
         }
         bucket.add(new Entry<>(key,value));
         size++;
+        if (size> buckets.length * load_factor){
+            resize();
+        }
     }
 
     public V get(K key){ // to get the index
@@ -64,6 +67,20 @@ public class MyHashTable<K, V> {
             buckets[index] = new ArrayList<>();
         }
         return buckets[index];
+    }
+
+
+    private void resize(){
+        List<Entry<K,V>>[] oldBuckets = buckets;
+        buckets = new List[buckets.length * 2];
+        size = 0;
+        for (List<Entry<K,V>> bucket: oldBuckets){
+            if (bucket != null) {
+                for (Entry<K,V> entry: bucket) {
+                    put(entry.getKey(), entry.getValue());
+                }
+            }
+        }
     }
 
     private static class Entry<K,V> {
