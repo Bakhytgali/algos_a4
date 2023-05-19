@@ -18,6 +18,16 @@ public class MyHashTable<K, V> {
         size = 0;
     }
 
+    public void replace(K key, V newValue){ // Method for assignment defence
+        int index = getIndex(key);
+        List<Entry<K, V>> bucket = getBucket(index);
+        for(Entry<K, V> entry: bucket) {
+            if(entry.getKey().equals(key)){
+                entry.setValue(newValue);
+            }
+        }
+    }
+
     public void put(K key, V value) { // use to put elements into hashTable
         int index = getIndex(key);
         List<Entry<K,V>> bucket = getBucket(index);
@@ -34,7 +44,7 @@ public class MyHashTable<K, V> {
         }
     }
 
-    public V get(K key){ // to get the index
+    public V get(K key){ // to get the element
         int index = getIndex(key);
         List<Entry<K, V>> bucket = getBucket(index);
         for (Entry<K,V> entry: bucket) {
@@ -57,7 +67,7 @@ public class MyHashTable<K, V> {
         }
     }
 
-    private int getIndex(K key){
+    private int getIndex(K key){ // to get the elements index
         int hashCode = key.hashCode();
         return Math.abs(hashCode % buckets.length);
     }

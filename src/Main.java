@@ -6,5 +6,8 @@ public class Main {
             MyTestingClass key  = new MyTestingClass(i);
             table.put(key, "value" + i);
         }
+        MyTestingClass key1 = new MyTestingClass(11);
+        table.replace(key1, "Hash");
+        table.get(key1);
     }
 }
